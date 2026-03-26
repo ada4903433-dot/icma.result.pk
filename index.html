@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ICMA Result</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+}
+
+/* HEADER */
+.header {
+    background: #000;
+    color: #fff;
+    padding: 12px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.header-right {
+    font-size: 14px;
+}
+
+/* LAYOUT */
+.container {
+    display: flex;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 230px;
+    background: #eee;
+    padding: 20px;
+}
+
+.sidebar div {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.sidebar div:hover {
+    background: #ddd;
+}
+
+/* CONTENT */
+.content {
+    flex: 1;
+    padding: 30px;
+}
+
+/* CARD */
+.card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 4px;
+}
+
+/* TABLE */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table th {
+    background: #b8a9a9;
+    color: #fff;
+    padding: 10px;
+}
+
+.table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+/* HIDE */
+.hidden {
+    display: none;
+}
+
+/* STATUS */
+.status {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    text-align: right;
+    font-size: 14px;
+}
+
+/* TITLE */
+h2 {
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+}
+
+</style>
+
+<script>
+function showResult() {
+    document.getElementById("result").style.display = "block";
+    document.getElementById("question").style.display = "none";
+}
+
+function showQuestion() {
+    document.getElementById("result").style.display = "none";
+    document.getElementById("question").style.display = "block";
+}
+</script>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+    <div class="header-left">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5f/ICMA_Pakistan_logo.png/200px-ICMA_Pakistan_logo.png">
+        <b>ICMA Pakistan</b>
+    </div>
+    <div class="header-right">
+        Home | Contact Us | Logout
+    </div>
+</div>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <div onclick="showResult()">Result</div>
+        <div onclick="showQuestion()">Result Question Wise</div>
+        <div>Chapter Wise Analysis</div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+
+        <!-- RESULT -->
+        <div id="result" class="card">
+            <h2>Result</h2>
+
+            <p><b>Reg No:</b> 20243089</p>
+            <p><b>Roll No:</b> 2225</p>
+            <p><b>Name:</b> MEHRAB SAJJAD</p>
+            <p><b>Session:</b> FEB-2026</p>
+            <p><b>Exam Centre:</b> KARACHI-HO</p>
+            <p><b>Result Date:</b> 25-Mar-2026</p>
+
+            <table class="table">
+                <tr>
+                    <th>Level/Semester</th>
+                    <th>Course(s)/Module(s)</th>
+                    <th>Marks</th>
+                    <th>Grades</th>
+                </tr>
+
+                <tr>
+                    <td>OL-2</td>
+                    <td>Business Mathematics and Statistics</td>
+                    <td>46</td>
+                    <td>Not Pass</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- QUESTION WISE -->
+        <div id="question" class="card hidden" style="position:relative;">
+
+            <div class="status">
+                <b>Level Status</b><br>
+                In Process
+            </div>
+
+            <h2>Result Question Wise</h2>
+
+            <p><b>Reg No:</b> 20243089</p>
+            <p><b>Roll No:</b> 2225</p>
+            <p><b>Name:</b> MEHRAB SAJJAD</p>
+
+            <table class="table">
+                <tr>
+                    <th>Q1</th><th>Q2</th><th>Q3</th><th>Q4</th>
+                    <th>Q5</th><th>Q6</th><th>Q7</th><th>Q8</th>
+                    <th>Q9</th><th>Q10</th><th>Q11</th>
+                    <th>Total</th><th>Grade</th>
+                </tr>
+
+                <tr>
+                    <td>30</td><td>3</td><td>2</td><td>1.5</td>
+                    <td>3</td><td>2</td><td>3</td><td>1</td>
+                    <td>1</td><td>0</td><td>0</td>
+                    <td>46</td><td>Not Pass</td>
+                </tr>
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
